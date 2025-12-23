@@ -2,7 +2,7 @@
 
 A simple and scalable database system to manage users, vehicles, and bookings for a rental service. The system ensures proper handling of business logic, booking management, and vehicle availability.
 
-## 📦 Features
+## Features
 
 - **User Management**:  
   - Store users with roles (`Admin` or `Customer`)  
@@ -22,7 +22,7 @@ A simple and scalable database system to manage users, vehicles, and bookings fo
   - Prevent double bookings  
   - Manage vehicle availability  
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Users Table
 | Column      | Type    | Constraints                  |
@@ -38,7 +38,7 @@ A simple and scalable database system to manage users, vehicles, and bookings fo
 | Column              | Type     | Constraints                     |
 |--------------------|---------|--------------------------------|
 | vehicle_id          | SERIAL  | PRIMARY KEY                    |
-| vehicle_name        | VARCHAR | NOT NULL                       |
+| name                | VARCHAR | NOT NULL                       |
 | type                | VARCHAR | NOT NULL (`car`, `bike`, `truck`) |
 | model               | VARCHAR |                                |
 | registration_number | VARCHAR | NOT NULL, UNIQUE               |
@@ -70,15 +70,11 @@ A simple and scalable database system to manage users, vehicles, and bookings fo
 4. **GROUP BY and HAVING Query**  
    Calculates the total number of bookings per vehicle and filters to show only those with more than a certain number of bookings. Helps in analyzing popular vehicles.
 
-## 🚀 How to Use
+## How to Use
 
 1. Create the database and tables using the schema above.
 2. Insert sample data for users, vehicles, and bookings.
 3. Execute queries to manage and analyze booking data according to business needs.
 
-## 💻 Tech Stack
-
-- PostgreSQL (Relational Database)  
-- SQL for data management and queries  
 
 ---

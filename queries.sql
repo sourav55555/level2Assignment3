@@ -4,7 +4,7 @@ inner join users u on u.id = b.user_id
 inner join vehicles v using(vehicle_id);
 
 -- Find all vehicles that have never been booked.
-select v.vehicle_id, v.vehicle_name AS name, v.type, v.model, v.registration_number, v.rental_price, v.status
+select v.vehicle_id, v.name, v.type, v.model, v.registration_number, v.rental_price, v.status
 from vehicles v
 where not exists (
     select 1
